@@ -38,7 +38,7 @@
 `При необходимости прикрепитe сюда скриншоты  `
 ![hspr-1](https://github.com/v1us1885/hw-disaster/blob/master/hspr-1.png)
 ![hspr-2](https://github.com/v1us1885/hw-disaster/blob/master/hspr-2.png)
-[https://github.com/v1us1885/hw-disaster/blob/master/hsrp_advanced1.pkt]
+[pkt файл](https://github.com/v1us1885/hw-disaster/blob/master/hsrp_advanced1.pkt)
 
 
 ---
