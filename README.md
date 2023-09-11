@@ -55,7 +55,7 @@
 
 
 
-`При необходимости прикрепитe сюда скриншоты
+`При необходимости прикрепитe сюда скриншоты`
 ![keepalived-1.png)](https://github.com/v1us1885/hw-disaster/blob/master/keepalived-1.png)
 [check_web.sh](https://github.com/v1us1885/hw-disaster/blob/master/chek_web.sh)
 [Keepalived.conf](https://github.com/v1us1885/hw-disaster/blob/master/keepalived.conf)
