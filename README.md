@@ -45,38 +45,19 @@
 
 ### Задание 2
 
-`Установите Zabbix Agent на два хоста.
-
-  Процесс выполнения  
-  Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.  
-  Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.  
-  Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.  
-  Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.  
-  Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.  
-### Требования к результаты
-  Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу  
-  Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером  
-  Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.  
-  Приложите в файл README.md текст использованных команд в GitHub`  
+Запустите две виртуальные машины Linux, установите и настройте сервис Keepalived как в лекции, используя пример конфигурационного файла.
+   Настройте любой веб-сервер (например, nginx или simple python server) на двух виртуальных машинах
+   Напишите Bash-скрипт, который будет проверять доступность порта данного веб-сервера и существование файла index.html в root-директории данного веб-сервера.
+   Настройте Keepalived так, чтобы он запускал данный скрипт каждые 3 секунды и переносил виртуальный IP на другой сервер, если bash-скрипт завершался с кодом, отличным от нуля (то есть порт веб-сервера был недоступен или отсутствовал index.html). Используйте для этого секцию vrrp_script
+   На проверку отправьте получившейся bash-скрипт и конфигурационный файл keepalived, а также скриншот с демонстрацией переезда плавающего ip на другой сервер в случае недоступности порта или файла index.html
+  
+### Решение 2
 
 
-```
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
-dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
-apt update
-apt install zabbix-agent
-sed -i 's/Server=127.0.0.1/Server=10.129.0.9/g' /etc/zabbix/zabbix_agentd.conf
-systemctl restart zabbix-agent
-systemctl enable zabbix-agent
-....
-....
-....
-....
-```
 
 `При необходимости прикрепитe сюда скриншоты
-![Configuration > Hosts](https://github.com/v1us1885/hw-02/blob/main/conf-zabbix.png)
-![log](https://github.com/v1us1885/hw-02/blob/main/log-zabbix.png)
-![log](https://github.com/v1us1885/hw-02/blob/main/latest-zabbix.png)
+![keepalived-1.png)](https://github.com/v1us1885/hw-disaster/blob/master/keepalived-1.png)
+[check_web.sh](https://github.com/v1us1885/hw-disaster/blob/master/chek_web.sh)
+[Keepalived.conf](https://github.com/v1us1885/hw-disaster/blob/master/keepalived.conf)
 
 
